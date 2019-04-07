@@ -1,0 +1,5614 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>minesweeper-eecs448 1.0.0 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+  <meta name='description' content='Minesweeper (2018)'>
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>minesweeper-eecs448</h3>
+          <div class='mb1'><code>1.0.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#project-information'
+                  class="h5 bold black caps toggle-sibling">
+                  Project Information
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#appjs'
+                        class='regular pre-open'>
+                        .app.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#publicjsindexjs'
+                        class='regular pre-open'>
+                        .public/js/index.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#publicjsboardjs'
+                        class='regular pre-open'>
+                        .public/js/board.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#publicjsstopwatchjs'
+                        class='regular pre-open'>
+                        .public/js/stopwatch.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#publicjsgamemanagerjs'
+                        class='regular pre-open'>
+                        .public/js/GameManager.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#publicjshighscoresjsonjs'
+                        class='regular pre-open'>
+                        .public/js/HighScoresJSON.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#publicjshighscoresviewerjs'
+                        class='regular pre-open'>
+                        .public/js/HighScoresViewer.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#publicjsmodalmanagerjs'
+                        class='regular pre-open'>
+                        .public/js/ModalManager.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#publicjspercentbarjs'
+                        class='regular pre-open'>
+                        .public/js/PercentBar.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#routesindexjs'
+                        class='regular pre-open'>
+                        .routes/index.js
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#works-cited'
+                  class="h5 bold black caps toggle-sibling">
+                  Works Cited
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#express'
+                        class='regular pre-open'>
+                        .express
+                      </a></li>
+                    
+                      <li><a
+                        href='#ejs'
+                        class='regular pre-open'>
+                        .ejs
+                      </a></li>
+                    
+                      <li><a
+                        href='#path'
+                        class='regular pre-open'>
+                        .path
+                      </a></li>
+                    
+                      <li><a
+                        href='#documentationjs'
+                        class='regular pre-open'>
+                        .documentation.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#jquery'
+                        class='regular pre-open'>
+                        .jQuery
+                      </a></li>
+                    
+                      <li><a
+                        href='#bootstrap'
+                        class='regular pre-open'>
+                        .Bootstrap
+                      </a></li>
+                    
+                      <li><a
+                        href='#popperjs'
+                        class='regular pre-open'>
+                        .Popper.js
+                      </a></li>
+                    
+                      <li><a
+                        href='#snackbarjs'
+                        class='regular pre-open'>
+                        .SnackbarJS
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#express'
+                  class="">
+                  express
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#express'
+                  class="">
+                  express
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#path'
+                  class="">
+                  path
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#app'
+                  class="">
+                  app
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#route_index'
+                  class="">
+                  route_index
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#port'
+                  class="">
+                  port
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#gameboard'
+                  class=" toggle-sibling">
+                  GameBoard
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#gameboardbuildgameboard'
+                        class='regular pre-open'>
+                        #buildGameBoard
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameboarddrawgameboard'
+                        class='regular pre-open'>
+                        #drawGameBoard
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameboardupdateflagcount'
+                        class='regular pre-open'>
+                        #updateFlagCount
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameboardupdateflagdisplay'
+                        class='regular pre-open'>
+                        #updateFlagDisplay
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameboardcheckwin'
+                        class='regular pre-open'>
+                        #checkWin
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameboardcellclicked'
+                        class='regular pre-open'>
+                        #cellClicked
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameboardrecreveal'
+                        class='regular pre-open'>
+                        #recReveal
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameboarddisplayvalue'
+                        class='regular pre-open'>
+                        #displayValue
+                      </a></li>
+                      
+                      <li><a
+                        href='#gameboardcellflagged'
+                        class='regular pre-open'>
+                        #cellFlagged
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#gamemanager'
+                  class=" toggle-sibling">
+                  GameManager
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#gamemanagerpresetconfig'
+                        class='regular pre-open'>
+                        #presetConfig
+                      </a></li>
+                      
+                      <li><a
+                        href='#gamemanagergetconfig'
+                        class='regular pre-open'>
+                        #getConfig
+                      </a></li>
+                      
+                      <li><a
+                        href='#gamemanagernewgame'
+                        class='regular pre-open'>
+                        #newGame
+                      </a></li>
+                      
+                      <li><a
+                        href='#gamemanagercheckfirstclick'
+                        class='regular pre-open'>
+                        #checkFirstClick
+                      </a></li>
+                      
+                      <li><a
+                        href='#gamemanagerwingame'
+                        class='regular pre-open'>
+                        #winGame
+                      </a></li>
+                      
+                      <li><a
+                        href='#gamemanagerlosegame'
+                        class='regular pre-open'>
+                        #loseGame
+                      </a></li>
+                      
+                      <li><a
+                        href='#gamemanagershowhighscores'
+                        class='regular pre-open'>
+                        #showHighScores
+                      </a></li>
+                      
+                      <li><a
+                        href='#gamemanagerhidehighscores'
+                        class='regular pre-open'>
+                        #hideHighScores
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#myjson_id'
+                  class="">
+                  myjson_id
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#highscoresjson'
+                  class=" toggle-sibling">
+                  HighScoresJSON
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#highscoresjsonaddscore'
+                        class='regular pre-open'>
+                        #addScore
+                      </a></li>
+                      
+                      <li><a
+                        href='#highscoresjsonpushscores'
+                        class='regular pre-open'>
+                        #pushScores
+                      </a></li>
+                      
+                      <li><a
+                        href='#highscoresjsongetjson'
+                        class='regular pre-open'>
+                        #getJSON
+                      </a></li>
+                      
+                      <li><a
+                        href='#highscoresjsoncheckifhighscore'
+                        class='regular pre-open'>
+                        #checkIfHighScore
+                      </a></li>
+                      
+                      <li><a
+                        href='#highscoresjsonpullscores'
+                        class='regular pre-open'>
+                        #pullScores
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#highscoresviewer'
+                  class=" toggle-sibling">
+                  HighScoresViewer
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#highscoresviewerinitialize'
+                        class='regular pre-open'>
+                        #initialize
+                      </a></li>
+                      
+                      <li><a
+                        href='#highscoresviewerdisplayscores'
+                        class='regular pre-open'>
+                        #displayScores
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#game_manager'
+                  class="">
+                  game_manager
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#click'
+                  class="">
+                  click
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#contextmenu'
+                  class="">
+                  contextmenu
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#modalmanager'
+                  class=" toggle-sibling">
+                  ModalManager
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#modalmanagerconfigmodal'
+                        class='regular pre-open'>
+                        #configModal
+                      </a></li>
+                      
+                      <li><a
+                        href='#modalmanagergamestartmodal'
+                        class='regular pre-open'>
+                        #gameStartModal
+                      </a></li>
+                      
+                      <li><a
+                        href='#modalmanagergameboardmodal'
+                        class='regular pre-open'>
+                        #gameBoardModal
+                      </a></li>
+                      
+                      <li><a
+                        href='#modalmanagergamelosemodal'
+                        class='regular pre-open'>
+                        #gameLoseModal
+                      </a></li>
+                      
+                      <li><a
+                        href='#modalmanagergamewinmodal'
+                        class='regular pre-open'>
+                        #gameWinModal
+                      </a></li>
+                      
+                      <li><a
+                        href='#modalmanagerhighscoremodal'
+                        class='regular pre-open'>
+                        #highScoreModal
+                      </a></li>
+                      
+                      <li><a
+                        href='#modalmanageroperationconfig'
+                        class='regular pre-open'>
+                        #operationConfig
+                      </a></li>
+                      
+                      <li><a
+                        href='#modalmanageroperationgamestart'
+                        class='regular pre-open'>
+                        #operationGameStart
+                      </a></li>
+                      
+                      <li><a
+                        href='#modalmanageroperationreset'
+                        class='regular pre-open'>
+                        #operationReset
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#percentbar'
+                  class=" toggle-sibling">
+                  PercentBar
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#percentbarresetbar'
+                        class='regular pre-open'>
+                        #resetBar
+                      </a></li>
+                      
+                      <li><a
+                        href='#percentbarincreaseprogress'
+                        class='regular pre-open'>
+                        #increaseProgress
+                      </a></li>
+                      
+                      <li><a
+                        href='#percentbardecreaseprogress'
+                        class='regular pre-open'>
+                        #decreaseProgress
+                      </a></li>
+                      
+                      <li><a
+                        href='#percentbarupdatedisplay'
+                        class='regular pre-open'>
+                        #updateDisplay
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stopwatch'
+                  class=" toggle-sibling">
+                  Stopwatch
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#stopwatchrun'
+                        class='regular pre-open'>
+                        #run
+                      </a></li>
+                      
+                      <li><a
+                        href='#stopwatchincrement'
+                        class='regular pre-open'>
+                        #increment
+                      </a></li>
+                      
+                      <li><a
+                        href='#stopwatchsetincrement'
+                        class='regular pre-open'>
+                        #setIncrement
+                      </a></li>
+                      
+                      <li><a
+                        href='#stopwatchstop'
+                        class='regular pre-open'>
+                        #stop
+                      </a></li>
+                      
+                      <li><a
+                        href='#stopwatchreset'
+                        class='regular pre-open'>
+                        #reset
+                      </a></li>
+                      
+                      <li><a
+                        href='#stopwatchgettime'
+                        class='regular pre-open'>
+                        #getTime
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#router'
+                  class="">
+                  router
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+            <div class='keyline-top-not py2'></div>
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='project-information'>
+      Project Information
+    </h3>
+    
+    
+  </div>
+  
+
+  <h1>minesweeper-eecs448</h1>
+<p>This implementation of Minesweeper has tried to remain true to the game's Windows 3.1 roots while using more modern technologies. The application is built using <a href="https://nodejs.org/en/">NodeJS</a>, makes use of a remote JSON storage service by the name of <a href="http://myjson.com">myjson</a>, and is ready for deployment as a Docker container. </p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='appjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>app.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Main file of the project.</p>
+<p>Handles administrative functions such as setting up view engine, routing, and exposing ports.</p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='publicjsindexjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>public/js/index.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Creates game manager object and listens for clicks in game board.</p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='publicjsboardjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>public/js/board.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Controls board functions and data with the Board class.</p>
+<p>Is responsible for generating game boards, drawing the boards within the
+main game modal, keeping track of flags, and properly handling click
+and right click events on the board.</p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='publicjsstopwatchjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>public/js/stopwatch.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Controls timing functions and data with the Stopwatch class.</p>
+<p>Is responsible for tracking the current game length.</p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='publicjsgamemanagerjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>public/js/GameManager.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Controls game state.</p>
+<p>Is responsible for sending commands to high score viewer/writer objects,
+stopwatch object, modal manager, and for creating &#x26; managing game boards.</p>
+<p>Handles game state changes such as moving from main menu to the game board,
+winning/losing games, and displaying highscores, as well as validating
+any user-input data associated with those events.</p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='publicjshighscoresjsonjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>public/js/HighScoresJSON.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Controls high score pushing/pulling and wraps around calls to myJSON server.</p>
+<p>Keeps local copy of high scores, and is responsible for checking user
+scores against local copy to determine high scores, adding those scores,
+and pushing them back to the myJSON server.</p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='publicjshighscoresviewerjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>public/js/HighScoresViewer.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Controls high score viewing modal.</p>
+<p>Relies on an instance of HighScoresJSON to pull down user scores, then
+displays those scores in the modal.</p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='publicjsmodalmanagerjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>public/js/ModalManager.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Controls individual modal show/hide events, as well as multiple concurrent
+modal events associated with game state changes.</p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='publicjspercentbarjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>public/js/PercentBar.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Controls percent-completed bar below game board.</p>
+<p>Responsible for resetting and updating the percent-complete bar.</p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='routesindexjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>routes/index.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Serves and renders page html.</p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+            <div class='keyline-top-not py2'></div>
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='works-cited'>
+      Works Cited
+    </h3>
+    
+    
+  </div>
+  
+
+  
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='express'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>express</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The express package provides a fast, simple web framework for node.js applications.</p>
+<p>We used express for our server hosting.</p>
+<p><a href="https://www.npmjs.com/package/express">https://www.npmjs.com/package/express</a></p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='ejs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>ejs</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>EJS is a simple templating language and view engine that can be used to generate HTML using javascript..</p>
+<p>We used ejs for our html view engine.</p>
+<p><a href="https://www.npmjs.com/package/ejs">https://www.npmjs.com/package/ejs</a></p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='path'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>path</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Path is a module for working with files and directories.</p>
+<p>We used path for our routing functionality.</p>
+<p><a href="https://www.npmjs.com/package/path">https://www.npmjs.com/package/path</a></p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='documentationjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>documentation.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Documentation.js is a simple documentation generation package that uses the JSDoc format.</p>
+<p>We used documentation.js for generating documentation from our js files.</p>
+<p><a href="https://www.npmjs.com/package/documentation">https://www.npmjs.com/package/documentation</a></p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='jquery'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>jQuery</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>jQuery is a javascript library that contains many useful functions for interacting with the DOM, making asyncronous calls, etc.</p>
+<p>We used jQuery for both of these purposes.</p>
+<p><a href="https://jquery.com/">https://jquery.com/</a></p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='bootstrap'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>Bootstrap</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Bootstap is a frontend HTML/CSS/JS library that simplifies many aspects of visual/frontend design.</p>
+<p>We used Bootstrap for its modals, navbars, and progress bar (and assorted other small functions).</p>
+<p><a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">https://getbootstrap.com/docs/4.1/getting-started/introduction/</a></p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='popperjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>Popper.js</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Popper is a javascript library used to more easily make tooltips and small dialogs.</p>
+<p><a href="https://popper.js.org/">https://popper.js.org/</a></p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='snackbarjs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>SnackbarJS</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>SnackbarJS is a library for displaying snackbar/toast popups at the bottom of the window.</p>
+<p>We used SnackbarJS for reset game/submit score popups in the game modal.</p>
+<p><a href="https://fezvrasta.github.io/snackbarjs/">https://fezvrasta.github.io/snackbarjs/</a></p>
+
+ 
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='express'>
+      express
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/app.js#L7-L7'>
+      <span>app.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>exports of express module</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>express</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='express'>
+      express
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/routes/index.js#L5-L5'>
+      <span>routes/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>exports of express module</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>express</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='path'>
+      path
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/app.js#L13-L13'>
+      <span>app.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>exports of path module</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>path</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='app'>
+      app
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/app.js#L19-L19'>
+      <span>app.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>instance of express</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>app</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='route_index'>
+      route_index
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/app.js#L29-L29'>
+      <span>app.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>backend index functionality</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>route_index</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='port'>
+      port
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/app.js#L36-L36'>
+      <span>app.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>port to allow connections on</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>port</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='gameboard'>
+      GameBoard
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/board.js#L4-L299'>
+      <span>public/js/board.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Definition of game board object</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new GameBoard(num_rows: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, num_cols: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, mine_count: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, preset_index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>num_rows</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    number of rows specified for board
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>num_cols</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    number of cols specified for board
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mine_count</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    number of mines specified for board
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>preset_index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?)</code>
+	    which preset this board is (0, 1, 2)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='gameboardbuildgameboard'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>buildGameBoard()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/board.js#L45-L92'>
+      <span>public/js/board.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Builds game board to spec of currently stored num_rows, num_cols, and mine_count</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>buildGameBoard()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameboarddrawgameboard'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>drawGameBoard()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/board.js#L99-L137'>
+      <span>public/js/board.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Displays game board in table</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>drawGameBoard()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameboardupdateflagcount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>updateFlagCount(operation, cell)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/board.js#L146-L164'>
+      <span>public/js/board.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Updates flag count according to operation</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>updateFlagCount(operation: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, cell: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>operation</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    increment or decrement flag count
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cell</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    DOM object of the cell that was flagged
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameboardupdateflagdisplay'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>updateFlagDisplay()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/board.js#L171-L173'>
+      <span>public/js/board.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>sets flag indicator above game board to remaining number of flags</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>updateFlagDisplay()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameboardcheckwin'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>checkWin()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/board.js#L183-L186'>
+      <span>public/js/board.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Function to trigger with each on click.
+Checks if the user has statisfied every condition to win the game.
+Returns true if user has flagged all mines.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>checkWin(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameboardcellclicked'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>cellClicked(cell)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/board.js#L196-L214'>
+      <span>public/js/board.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Calls displayValue() to show cell values and then handles the rules
+when telling what other cells will need to be cleared due to game rules</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>cellClicked(cell: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cell</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    DOM object of the cell that was clicked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        true if this click caused game lose condition
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameboardrecreveal'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>recReveal(i, j)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/board.js#L223-L251'>
+      <span>public/js/board.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Recursively reveals the the cell at (i, j) and any adjacent cells, if applicable</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>recReveal(i: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, j: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>i</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    row index of current cell
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>j</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    column index of current cell
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameboarddisplayvalue'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>displayValue(cell)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/board.js#L259-L270'>
+      <span>public/js/board.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Displays the cell value on the game_board</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>displayValue(cell: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cell</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    DOM object of the cell that was clicked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gameboardcellflagged'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>cellFlagged(cell)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/board.js#L278-L298'>
+      <span>public/js/board.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>toggles flagged status of a cell</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>cellFlagged(cell: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cell</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    DOM object of the cell that was clicked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='gamemanager'>
+      GameManager
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/GameManager.js#L6-L233'>
+      <span>public/js/GameManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Controls game state - switches between config and game, etc.
+Sends commands to stopwatch, modal manager, high scores objects.
+Also creates and manages game boards.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new GameManager()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='gamemanagerpresetconfig'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>presetConfig(preset_index)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/GameManager.js#L33-L55'>
+      <span>public/js/GameManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Initializes game board for requested preset.
+Calls this.board.buildGameBoard() and begins game operations.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>presetConfig(preset_index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>preset_index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    index of requested preset (0, 1, or 2)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gamemanagergetconfig'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getConfig()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/GameManager.js#L61-L66'>
+      <span>public/js/GameManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Resets stopwatch and calls modal to get game config</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getConfig()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gamemanagernewgame'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>newGame()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/GameManager.js#L132-L145'>
+      <span>public/js/GameManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Hides start game, win game, and lose game modals.
+Resets stopwatch.
+Builds and displays new game board.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>newGame()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gamemanagercheckfirstclick'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>checkFirstClick()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/GameManager.js#L152-L158'>
+      <span>public/js/GameManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>helper function - if this was a first click, then start the Stopwatch</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>checkFirstClick()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gamemanagerwingame'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>winGame()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/GameManager.js#L169-L191'>
+      <span>public/js/GameManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Stops stopwatch.
+Gets time.
+Updates score label on win game modal.
+Calls function to determine if user earned high score.
+Presents win game modal depending on if a high score was earned.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>winGame()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gamemanagerlosegame'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>loseGame()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/GameManager.js#L198-L200'>
+      <span>public/js/GameManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Presents lose game modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>loseGame()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gamemanagershowhighscores'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>showHighScores(preset_index)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/GameManager.js#L208-L223'>
+      <span>public/js/GameManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>presents high score modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>showHighScores(preset_index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>preset_index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+            = <code>this.board.preset_index</code>)</code>
+	    initial index to open high scores with
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='gamemanagerhidehighscores'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>hideHighScores()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/GameManager.js#L230-L232'>
+      <span>public/js/GameManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>hides high score modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>hideHighScores()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='myjson_id'>
+      myjson_id
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/HighScoresJSON.js#L5-L5'>
+      <span>public/js/HighScoresJSON.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>id of highscore json from myJSON</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>myjson_id</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='highscoresjson'>
+      HighScoresJSON
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/HighScoresJSON.js#L12-L286'>
+      <span>public/js/HighScoresJSON.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>allows for interaction with myjson high score file</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new HighScoresJSON()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='highscoresjsonaddscore'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>addScore()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/HighScoresJSON.js#L32-L73'>
+      <span>public/js/HighScoresJSON.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Adds queued user score to high scores, then calls pushScores</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>addScore()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='highscoresjsonpushscores'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>pushScores()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/HighScoresJSON.js#L81-L110'>
+      <span>public/js/HighScoresJSON.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Push local scores copy to myjson.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>pushScores(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        resolved when response is received from myjson server
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='highscoresjsongetjson'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getJSON()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/HighScoresJSON.js#L118-L120'>
+      <span>public/js/HighScoresJSON.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>gets raw json from myjson</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getJSON(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='highscoresjsoncheckifhighscore'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>checkIfHighScore(score, preset_index)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/HighScoresJSON.js#L130-L174'>
+      <span>public/js/HighScoresJSON.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Determines if user has earned a high score to spec of board preset (if any)</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>checkIfHighScore(score: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, preset_index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>score</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    the score the user has earned
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>preset_index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    the index of the preset the user has selected (if any)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        resolved with a boolean indicating whether or not the user earned a high score
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='highscoresjsonpullscores'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>pullScores()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/HighScoresJSON.js#L180-L203'>
+      <span>public/js/HighScoresJSON.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>pulls scores from myjson and updates status variables</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>pullScores(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='highscoresviewer'>
+      HighScoresViewer
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/HighScoresViewer.js#L4-L70'>
+      <span>public/js/HighScoresViewer.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>manages functions related to high score modal and displaying high scores</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new HighScoresViewer()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='highscoresviewerinitialize'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>initialize(preset_index)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/HighScoresViewer.js#L17-L36'>
+      <span>public/js/HighScoresViewer.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Pulls scores from server, then calls displayScores()
+to initialize table information when the high score modal is opened.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>initialize(preset_index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>preset_index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+            = <code>0</code>)</code>
+	    initial index to open high scores with
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='highscoresviewerdisplayscores'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>displayScores(preset_index)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/HighScoresViewer.js#L44-L69'>
+      <span>public/js/HighScoresViewer.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>update scores from the local JSON copy</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>displayScores(preset_index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>preset_index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    which preset to display scores for (0, 1, 2)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='game_manager'>
+      game_manager
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/index.js#L5-L5'>
+      <span>public/js/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Instance of game manager used for everything</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>game_manager</div>
+   
+  
+    <p>
+      Type:
+      <a href="#gamemanager">GameManager</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='click'>
+      click
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/index.js#L16-L27'>
+      <span>public/js/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>click listener for board clear events</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>click</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>data</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/API/Event">Event</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='contextmenu'>
+      contextmenu
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/index.js#L36-L53'>
+      <span>public/js/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>right click listener for board flag events</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>contextmenu</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>data</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/API/Event">Event</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        always returns false to prevent context menu appearing
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='modalmanager'>
+      ModalManager
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/ModalManager.js#L4-L113'>
+      <span>public/js/ModalManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>provides functions for interacting with all the various modals.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new ModalManager()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='modalmanagerconfigmodal'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>configModal(operation)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/ModalManager.js#L16-L18'>
+      <span>public/js/ModalManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Manage config modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>configModal(operation: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>operation</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    hide or show modal
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='modalmanagergamestartmodal'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>gameStartModal(operation)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/ModalManager.js#L26-L28'>
+      <span>public/js/ModalManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Manage start game modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>gameStartModal(operation: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>operation</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    hide or show modal
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='modalmanagergameboardmodal'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>gameBoardModal(operation)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/ModalManager.js#L36-L38'>
+      <span>public/js/ModalManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Manage game board modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>gameBoardModal(operation: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>operation</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    hide or show modal
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='modalmanagergamelosemodal'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>gameLoseModal(operation)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/ModalManager.js#L46-L48'>
+      <span>public/js/ModalManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Manage game lose modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>gameLoseModal(operation: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>operation</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    hide or show modal
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='modalmanagergamewinmodal'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>gameWinModal(operation, isHighscore)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/ModalManager.js#L57-L64'>
+      <span>public/js/ModalManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Manage game win modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>gameWinModal(operation: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, isHighscore: Bool)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>operation</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    hide or show modal
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>isHighscore</span> <code class='quiet'>(Bool)</code>
+	    whether or not user earned a high score`
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='modalmanagerhighscoremodal'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>highScoreModal(operation)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/ModalManager.js#L72-L74'>
+      <span>public/js/ModalManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>manage high score modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>highScoreModal(operation: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>operation</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    hide or show modal
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='modalmanageroperationconfig'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>operationConfig()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/ModalManager.js#L81-L89'>
+      <span>public/js/ModalManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Runs operations needed to ready config modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>operationConfig()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='modalmanageroperationgamestart'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>operationGameStart()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/ModalManager.js#L96-L101'>
+      <span>public/js/ModalManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Runs operations needed to ready game start modal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>operationGameStart()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='modalmanageroperationreset'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>operationReset()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/ModalManager.js#L108-L112'>
+      <span>public/js/ModalManager.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Runs operations needed for game reset</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>operationReset()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='percentbar'>
+      PercentBar
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/PercentBar.js#L4-L48'>
+      <span>public/js/PercentBar.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>class for interacting with percent bar below game board</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new PercentBar(cells: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cells</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    the number of cells in the gameboard this percent bar is associated with
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='percentbarresetbar'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>resetBar()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/PercentBar.js#L18-L21'>
+      <span>public/js/PercentBar.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>sets currently done percentage to 0 and updates progress bar.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>resetBar()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='percentbarincreaseprogress'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>increaseProgress()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/PercentBar.js#L26-L29'>
+      <span>public/js/PercentBar.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>increases the displayed progress by one cell</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>increaseProgress()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='percentbardecreaseprogress'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>decreaseProgress()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/PercentBar.js#L34-L37'>
+      <span>public/js/PercentBar.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>decreses the displayed progress by one cell</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>decreaseProgress()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='percentbarupdatedisplay'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>updateDisplay()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/PercentBar.js#L42-L46'>
+      <span>public/js/PercentBar.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>calculates the current percentage done, and displays it as text and as width of progress bar</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>updateDisplay()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stopwatch'>
+      Stopwatch
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/stopwatch.js#L4-L129'>
+      <span>public/js/stopwatch.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Definition of stopwatch object</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new Stopwatch()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='stopwatchrun'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>run()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/stopwatch.js#L18-L20'>
+      <span>public/js/stopwatch.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>tells stopwatch to begin counting</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>run()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='stopwatchincrement'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>increment()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/stopwatch.js#L27-L59'>
+      <span>public/js/stopwatch.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Increments properties of stopwatch</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>increment()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='stopwatchsetincrement'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setIncrement(seconds, minutes, hours)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/stopwatch.js#L69-L73'>
+      <span>public/js/stopwatch.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>directly set time of stopwatch</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>setIncrement(seconds: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, minutes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, hours: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>seconds</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    number of seconds to display
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>minutes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    number of minutes to display
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>hours</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    number of hours to display
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='stopwatchstop'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>stop()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/stopwatch.js#L81-L83'>
+      <span>public/js/stopwatch.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Haults increment of stopwatch by clearing timeout
+Does not reset object properties</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>stop()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='stopwatchreset'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>reset()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/stopwatch.js#L91-L99'>
+      <span>public/js/stopwatch.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Clears set timeout and resets stopwatch variables
+Resets label to 00:00:00</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>reset()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='stopwatchgettime'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getTime()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/public/js/stopwatch.js#L107-L128'>
+      <span>public/js/stopwatch.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Formats time as standard HH:MM:SS
+Returns time</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getTime()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='router'>
+      router
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/EvanBrown96/minesweeper-eecs448/blob/0af89972c531d61076e8ace2a9c4d83e5cb3a722/routes/index.js#L11-L11'>
+      <span>routes/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>express router for frontend/backend interaction</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>router</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
