@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>Minesweeper (2018)</title>
+  </head>
+
+  <body class="bg-secondary">
+
+    <!--
+    game set up modal
+    -->
+    <div class="modal fade bg-info" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" id="modal_game_setup" onkeypress="javascript: if(event.keyCode == 13) game_manager.validateConfig();">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <img class="img-fluid" style="height:03vw;" src="/images/minesweeper-quick-lose.png">
+          <div class="modal-header">
+            <h2 class="modal-title">Game Setup</h2>
+            <button type="button" class="btn btn-raised btn-info" onclick="javascript: game_manager.showHighScores(0);">High Scores</button>
+          </div>
+          <div class="modal-body">
+            <p class="card-text">Choose a preset.</p>
+            <form class="form-inline justify-content-between">
+              <button type="button" class="btn btn-raised btn-secondary" onclick="javascript: game_manager.presetConfig(0);">8x8, 10 Mines</button>
+              <button type="button" class="btn btn-raised btn-secondary" onclick="javascript: game_manager.presetConfig(1);">16x16, 40 Mines</button>
+              <button type="button" class="btn btn-raised btn-secondary" onclick="javascript: game_manager.presetConfig(2);">16x30, 99 Mines</button>
+            </form>
+            <form>
+              <span class="card-text">Or give us some information and we'll set up your game.</span>
+              <div class="form-group">
+                <label for="input_board_rows" class="bmd-label-floating">Number of rows</label>
+                <input type="number" class="form-control" id="input_board_rows">
+              </div>
+              <div class="form-group">
+                <label for="input_board_cols" class="bmd-label-floating">Number of columns</label>
+                <input type="number" class="form-control" id="input_board_cols">
+              </div>
+              <div class="form-group">
+                <label for="input_mine_count" class="bmd-label-floating">Mine count</label>
+                <input type="number" class="form-control" id="input_mine_count">
+              </div>
+              <button type="button" class="btn btn-raised btn-success" onclick="javascript: game_manager.validateConfig();">Start</button>
+            </form>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <label class="text-muted">
+              <a href="https://github.com/EvanBrown96/minesweeper-eecs448" target="_blank">
+                Github
+              </a>
+            </label>
+            <label class="text-muted">
+              Version 0.0.0
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    game board modal
+    -->
+    <div class="modal fade bg-secondary" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="false" id="modal_game_board">
+      <div class="modal-dialog modal-dialog-centered" id="modal_dialog_game_board" role="document">
+        <div class="modal-content">
+          <nav class="navbar navbar-light bg-light justify-content-between">
+            <span class="navbar-brand mb-0 h1">Minesweeper (2018)</span>
+            <button type="button" class="btn btn-raised btn-danger" onclick="javascript: game_manager.getConfig();">Back to Menu</button>
+          </nav>
+          <nav class="navbar navbar-light bg-light justify-content-between">
+            <span class="navbar-item" id="flag_indicator">
+              <img src="/images/flag.png" style="width:25px;"/>
+              <span id="flag_count">10</span>
+            </span>
+            <a class = "navbar-item" onclick="javsscript: game_manager.newGame();">
+              <img src="/images/smiley.png" id="board_image_smiley" style="width:25px;"/>
+            </a>
+            <div>
+              <img src="/images/clock.png" style="width:25px;"/>
+              <span class="navbar-item" id="label_stopwatch">
+                00:00:00
+              </span>
+            </div>
+          </nav>
+          <div class="modal-body" id="modal_body_game_board">
+            <table class="table table-bordered bg-secondary" id="table_game_board">
+            </table>
+            <div class="progress" style="height:20px">
+              <div id="prog_bar" class="progress-bar progress-bar-success" role="progressbar" style="width:0%">
+              0%
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <label class="text-muted">
+              Version 0.0.0
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    start game modal
+    -->
+    <div class="modal fade bg-success" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" id="modal_start_game" onkeypress="javascript: if(event.keyCode == 13) game_manager.newGame();">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Ready?</h2>
+          </div>
+          <div class="modal-body">
+            <button type="button" class="btn btn-raised btn-success" onclick="javsscript: game_manager.newGame();">Yep</button>
+            <button type="button" class="btn btn-raised btn-danger" onclick="javascript: game_manager.getConfig();">Nope, let's go back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    bad config input modal
+    -->
+    <div class="modal fade bg-warning" tabindex="-1" role="dialog" id="modal_bad_config" onkeypress="javascript: if(event.keyCode == 13) $('#modal_bad_config').modal('hide');">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Whoops...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="phrase_board_size"><strong>Bad Board Size:</strong> Nice try, boards are made of numbers. Make it bigger than one and no bigger than fifty while you're at it.</p>
+            <p id="phrase_mine_count"><strong>Bad Mine Count:</strong> Good one, but mines can count. Give a number. And make it less than the number of squares too.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Got it</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    fail game
+    -->
+    <div class="modal fade bg-warning" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" id="modal_lose">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">FAIL</h3>
+          </div>
+          <div class="modal-body">
+            You clicked on a mine.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-raised btn-info mr-auto" onclick="javascript: game_manager.showHighScores();">High Scores</button>
+            <button type="button" class="btn btn-raised btn-success" style="margin-right:.5vw;" onclick="javascript: game_manager.newGame();">New Game</button>
+            <button type="button" class="btn btn-raised btn-danger" onclick="javascript: game_manager.getConfig();">Back to Menu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    win game
+    -->
+    <div class="modal fade bg-success" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" id="modal_win">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">SUCCESS</h2>
+          </div>
+          <div class="modal-body">
+            You won the game!<br/>
+            Elapsed time: <span id="win_time">(put time here)</span>
+            <div id="is_highscore">
+              You've also earned a high score! Submit your name below.
+              <form>
+                <div class="form-group">
+                  <label for="input_high_score_name" class="bmd-label-floating">Your name</label>
+                  <input type="text" class="form-control" id="input_high_score_name">
+                </div>
+                <div class="form-group bmd-form-group">
+                  <button id="submit_score" type="button" class="btn btn-sm btn-raised btn-info" onclick="javscript: game_manager.json_caller.addScore();">Submit Score</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-raised btn-info mr-auto" onclick="javascript: game_manager.showHighScores();">High Scores</button>
+            <button type="button" class="btn btn-raised btn-success" style="margin-right:.5vw;" onclick="javascript: game_manager.newGame();">New Game</button>
+            <button type="button" class="btn btn-raised btn-danger" onclick="javascript: game_manager.getConfig();">Back to Menu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    high scores
+    -->
+    <div class="modal fade bg-info" tabindex="-1" role="dialog" id="modal_high_scores">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">High Scores</h3>
+            <button type="button" class="btn btn-raised btn-danger" onclick="javascript: game_manager.hideHighScores();">Back</button>
+          </div>
+          <div class="modal-body">
+            <p class="card-text">Choose a preset, view some scores.</p>
+            <form class="form-inline justify-content-between">
+              <button type="button" class="btn btn-raised btn-secondary" onclick="javascript: game_manager.hs_viewer.displayScores(0);">8x8, 10 Mines</button>
+              <button type="button" class="btn btn-raised btn-secondary" onclick="javascript: game_manager.hs_viewer.displayScores(1);">16x16, 40 Mines</button>
+              <button type="button" class="btn btn-raised btn-secondary" onclick="javascript: game_manager.hs_viewer.displayScores(2);">16x30, 99 Mines</button>
+            </form>
+            <table class="table table-bordered bg-light table-hover" id="hs_table">
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, SnackbarJS, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <!-- SnackbarJS plugin -->
+    <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <!-- Optional JavaScript -->
+    <script src="js/PercentBar.js"></script>
+    <script src="js/Board.js"></script>
+    <script src="js/Stopwatch.js"></script>
+    <script src="js/ModalManager.js"></script>
+    <script src="js/GameManager.js"></script>
+    <script src="js/HighScoresJSON.js"></script>
+    <script src="js/HighScoresViewer.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

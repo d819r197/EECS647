@@ -1,0 +1,51 @@
+body {
+  font-family: 'VT323', monospace;
+}
+
+#modal_game_setup {
+  background-image:url(/images/team_logo.png);
+  background-size:10%;
+  background-position: .60vw 87vh;
+  background-repeat: no-repeat;
+}
+
+#modal_dialog_game_board {
+    margin: 2vh auto 6vh auto;
+    position: relative;
+    display: table;
+    overflow-y: initial !important;
+    overflow-x: initial !important;
+    width: auto;
+    min-width: 20vw;
+    min-height: 10vh;
+}
+
+#modal_body_game_board {
+    max-width: 80vw;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    width: auto;
+    height: auto;
+    max-height: 75vh;
+}
+
+#table_game_board td {
+    background-size: contain;
+    position: relative;
+}
+
+#table_game_board td:after {
+    content: '';
+  	display: block;
+    margin-top: 100%;
+}
+
+#table_game_board td .content {
+  	text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 150%;
+  }
