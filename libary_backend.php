@@ -1,22 +1,67 @@
 <?php
-$servername = "mysql.eecs.ku.edu";
-$username = "rblake";
-$password = "chah9riL";
-
 // Create connection
-#$conn = new mysqli($servername, $username, $password);
-#$conn = new mysqli("mysql.eecs.ku.edu", "d819r197", "Koo3Kee4", "d819r197");
 $conn = new mysqli("mysql.eecs.ku.edu", "rblake", "chah9riL", "rblake");
-
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
+else {
+  echo "Connected successfully <br>";
+}
+
+//Creates an Array of Tables
+/*function create_tables()
+{
+
+    echo "Table Extraction Started... <br>";
+
+    $conn = new mysqli("mysql.eecs.ku.edu", "rblake", "chah9riL", "rblake");
+
+    $database='rblake';
+    $tables = array();
+    //$list_tables_sql = "SHOW TABLES FROM {$database};";
+    $list_tables_sql = "SHOW TABLES;";
+    $result = $conn->query($list_tables_sql);
+
+    if ($result) {
+      if ($result->num_rows > 0) {
+        echo "num rows > 0 success <br>";
+
+        while($row = $result->fetch_assoc())) { // go through each row that was returned in $result
+          echo($table[0] . "<BR>");    // print the table that was returned on that row.
+          $tables[] = $table[0];
+        }
+      }
+    }
+    else if ($result->num_rows > 0) {
+      while($table = mysql_fetch_row($result))
+      {
+        $tables[] = $table[0];
+        echo $table[0];
+      }
+    return $tables;
+    echo "Table Made!<br>";
+    }
+    else {
+      echo "Table Extraction Failed <br>";
+  }
+}
+
+//Make Table of Tables
+//$arr_tables = array();
+//$arr_tables = create_tables();
+
+//Create Front End Select Input for Each Table
+echo "<select><option>Select a Table</option>";
+for($lcv = 0; $lcv < sizeof($arr_tables); $lcv++) {
+  echo "<option value='" . $arr_tables[$lcv] . "'>" . $arr_tables[$lcv] . "</option><br>";
+}
+echo "</select>";
+*/
+
 
 //$sql = $_POST["query"];
-//$sql = "SELECT CRUISENUM, DIRECTOR FROM CRUISE;";
 $sql = "SELECT * FROM `CRUISE`;";
 $result = $conn->query($sql);
 
@@ -28,20 +73,12 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-/*
-$userInput = "123b2lake123";
 
-$userQuery = "SELECT * FROM `Users` WHERE `user_id`='" . $userInput . "';";
-  $userIs = $conn->query($userQuery);
-  $numUsersFound = $userIs->num_rows;
-  
-  if ($numUsersFound > 0) {
-    echo "<p>Error: User already exist.</p><br>";
-  }
-  else {
-    echo "<p>Number of Users with Username: " . $userInput . " is: " . $numUsersFound . "</p>";
-  }*/
+
+//Close Connection with Database
 $conn->close();
 
 ?>
+
+                                                                                                                                                                                          86,0-1        Bot
 
