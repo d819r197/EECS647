@@ -2,41 +2,46 @@
 $servername = "mysql.eecs.ku.edu";
 $username = "rblake";
 $password = "chah9riL";
-$dbname = "rblake";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+#$conn = new mysqli($servername, $username, $password);
+#$conn = new mysqli("mysql.eecs.ku.edu", "d819r197", "Koo3Kee4", "d819r197");
+$conn = new mysqli("mysql.eecs.ku.edu", "rblake", "chah9riL", "rblake");
+
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully <br>";
+echo "Connected successfully";
 
-$sql = $_POST["query"];
-echo $sql;
-#$result = $conn->query($sql);
+//$sql = $_POST["query"];
+//$sql = "SELECT CRUISENUM, DIRECTOR FROM CRUISE;";
+$sql = "SELECT * FROM `CRUISE`;";
+$result = $conn->query($sql);
 
-$result = mysql_query($sql);
-
-if (!$result) {
-    echo '<br>Could not run query: ' . mysql_error() . "<br>";
-    #exit;
-}
-
-$row = mysql_fetch_row($result);
-
-echo "cell 1: " . $row[0]; // 42
-echo "cell 2: " . $row[1]; // the email value
-
-/*if ($result->num_rows > 0) {
+if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Row: " . $row . "<br>";
-    }
+      printf ("%s (%s)\n", $row["CRUISENUM"], $row["DIRECTOR"]);
+  }
 } else {
     echo "0 results";
-}*/
+}
+/*
+$userInput = "123b2lake123";
+
+$userQuery = "SELECT * FROM `Users` WHERE `user_id`='" . $userInput . "';";
+  $userIs = $conn->query($userQuery);
+  $numUsersFound = $userIs->num_rows;
+  
+  if ($numUsersFound > 0) {
+    echo "<p>Error: User already exist.</p><br>";
+  }
+  else {
+    echo "<p>Number of Users with Username: " . $userInput . " is: " . $numUsersFound . "</p>";
+  }*/
 $conn->close();
 
 ?>
+
