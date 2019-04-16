@@ -1,17 +1,20 @@
 <html>
 <head>
-  <!--<?php include 'libary_backend.php';?>-->
   <link href="style.css"
         rel="stylesheet"
         type="text/css"/>
 </head>
 <body>
-  <form class = "creds" id="inputCreds" action="libary_backend.php" method="post">
-    <h1><b>QUERY:</b></h1>
-    <input id="queryInput" name="query" value="Insert Query">
-    <input id="submitQuery" type="submit" value="Submit">
+  <form action="libary_backend.php" method="post">
+    <input name="sid" value="Insert StudentID">
+    <input name="dis" value="Insert Date In School">
+    <input name="name" value="Insert Name">
+    <input name="addS" type="submit" value="Submit">
+  </form> 
+  <br><hr><br> 
+  <form action="libary_backend.php" method="post">
+    <h1><b>Test Query</b></h1>
+    <input name="testSQL" type="submit" value="Submit">
   </form>
-  <h1><b>Result:</b></h1>
-
 </body>
 </html>
