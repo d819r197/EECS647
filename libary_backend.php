@@ -1,79 +1,104 @@
 <?php
-// Create connection
-$conn = new mysqli("mysql.eecs.ku.edu", "rblake", "chah9riL", "rblake");
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+function establishConnection() {
+  // Create connection
+  $conn = new mysqli("mysql.eecs.ku.edu", "rblake", "chah9riL", "rblake");
+
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+  else {
+    echo "Connected successfully <br>";
+  }
+  return($conn);
 }
-else {
-  echo "Connected successfully <br>";
+
+function addStudent($sid, $dis, $name) {
+  $conn = establishConnection();
+  $sid = $_POST["sid"];
+  $dis = $_POST["dis"];
+  $name = $_POST["name"];
+  $sql = "INSERT INTO `STUDENT` (SID, DATE_IN_SCHOOL, NAME) VALUES (\"" . $sid . "\", \"" . $dis . "\", \"" . $name . "\")";
+
+  if (mysqli_query($conn, $sql)) {
+      echo "New record created successfully";
+  } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
+
 }
 
-//Creates an Array of Tables
-/*function create_tables()
-{
-
-    echo "Table Extraction Started... <br>";
-
-    $conn = new mysqli("mysql.eecs.ku.edu", "rblake", "chah9riL", "rblake");
-
-    $database='rblake';
-    $tables = array();
-    //$list_tables_sql = "SHOW TABLES FROM {$database};";
-    $list_tables_sql = "SHOW TABLES;";
-    $result = $conn->query($list_tables_sql);
-
-    if ($result) {
-      if ($result->num_rows > 0) {
-        echo "num rows > 0 success <br>";
-
-        while($row = $result->fetch_assoc())) { // go through each row that was returned in $result
-          echo($table[0] . "<BR>");    // print the table that was returned on that row.
-          $tables[] = $table[0];
-        }
-      }
-    }
-    else if ($result->num_rows > 0) {
-      while($table = mysql_fetch_row($result))
-      {
-        $tables[] = $table[0];
-        echo $table[0];
-      }
-    return $tables;
-    echo "Table Made!<br>";
-    }
-    else {
-      echo "Table Extraction Failed <br>";
+function triggerAction() {
+  if(isset($_POST['addS'])) {
+     addStudent();
+  } 
+  else if(isset($_POST['testSQL'])) {
+     testSQL();
   }
 }
 
-//Make Table of Tables
-//$arr_tables = array();
-//$arr_tables = create_tables();
-
-//Create Front End Select Input for Each Table
-echo "<select><option>Select a Table</option>";
-for($lcv = 0; $lcv < sizeof($arr_tables); $lcv++) {
-  echo "<option value='" . $arr_tables[$lcv] . "'>" . $arr_tables[$lcv] . "</option><br>";
+function listStudent() {
+$conn = establishConnection();
+ 
 }
-echo "</select>";
-*/
 
+function removeStudent() {
+$conn = establishConnection();
 
-//$sql = $_POST["query"];
-$sql = "SELECT * FROM `CRUISE`;";
-$result = $conn->query($sql);
+} 
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-      printf ("%s (%s)\n", $row["CRUISENUM"], $row["DIRECTOR"]);
+function addLibrarian() {
+$conn = establishConnection();
+
+}
+
+function listLibrarian() {
+$conn = establishConnection();
+  
+}
+
+function removeLibrarian() {
+$conn = establishConnection();
+
+}
+
+function checkoutBook() {
+$conn = establishConnection();
+
+}
+
+function listCheckedoutBook () {
+$conn = establishConnection();
+  
+}
+
+function checkinBook() {
+$conn = establishConnection();
+  
+}
+
+function testSQL() {
+  $conn = establishConnection();
+  $sql = "SELECT * FROM `CRUISE`;";
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        printf ("%s (%s)\n", $row["CRUISENUM"], $row["DIRECTOR"]);
+    }
+  } else {
+      echo "0 results";
   }
-} else {
-    echo "0 results";
 }
 
+triggerAction();
+//testSQL();
+//addStudent($_POST["sid"], $_POST["dis"], $_POST["name"]);
+
+//Add Back Button
+echo "<br><hr><a href='index.html'>Back</a>";
 
 //Close Connection with Database
 $conn->close();
