@@ -19,13 +19,13 @@ function triggerAction() {
      addStudent($_POST["sid"], $_POST["dis"], $_POST["name"]);
   }
   else if(isset($_POST['viewS'])) {
-     viewStudent($_POST["id"], $_POST["name"], $_POST["office"]);
+     viewStudent();
   }
   else if(isset($_POST['deleteS'])) {
      deleteStudent();
   }
   else if(isset($_POST['addL'])) {
-     addLibrarian();
+     addLibrarian($_POST["id"], $_POST["name"], $_POST["office"]);
   }
   else if(isset($_POST['viewL'])) {
      viewLibrarian();
@@ -34,7 +34,7 @@ function triggerAction() {
      deleteLibrarian();
   }
   else if(isset($_POST['addB'])) {
-     addBook();
+     addBook($_POST["id"], $_POST["pc"], $_POST["title"], $_POST["genre"]);
   }
   else if(isset($_POST['viewB'])) {
      viewBook();
@@ -93,7 +93,7 @@ $conn = establishConnection();
 
 function addBook($id, $pg, $title, $genre) {
   $conn = establishConnection();
-  $sql = "INSERT INTO `STUDENT` (BOOK_ID, PAGECOUNT, TITLE, GENRE) VALUES (\"" . $id . "\", \"" . $pg . "\", \"" . $title . "\", \"" . $genre . "\")";
+  $sql = "INSERT INTO `BOOKS` (BOOK_ID, PAGECOUNT, TITLE, GENRE) VALUES (\"" . $id . "\", \"" . $pg . "\", \"" . $title . "\", \"" . $genre . "\")";
 
   if (mysqli_query($conn, $sql)) {
       echo "New record created successfully";
