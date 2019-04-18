@@ -22,16 +22,16 @@ function triggerAction() {
      viewStudent();
   }
   else if(isset($_POST['deleteS'])) {
-     deleteStudent($_POST["name"]);
+     removeStudent($_POST["name"]);
   }
   else if(isset($_POST['addL'])) {
-     addLibrarian($_POST["id"], $_POST["name"], $_POST["office"]);
+     addLibrarian($_POST["lid"], $_POST["name"], $_POST["office"]);
   }
   else if(isset($_POST['viewL'])) {
      viewLibrarian();
   }
   else if(isset($_POST['deleteL'])) {
-     deleteLibrarian($_POST["id"]);
+     removeLibrarian($_POST["lid"]);
   }
   else if(isset($_POST['addB'])) {
      addBook($_POST["id"], $_POST["pc"], $_POST["title"], $_POST["genre"]);
@@ -40,7 +40,7 @@ function triggerAction() {
      viewBook();
   }
   else if(isset($_POST['deleteB'])) {
-     deleteBook($_POST["id"]);
+     removeBook($_POST["id"]);
   }
   else if(isset($_POST['testSQL'])) {
      testSQL();
@@ -60,19 +60,31 @@ function addStudent($sid, $dis, $name) {
 }
 
 function listStudent() {
-$conn = establishConnection();
+  $conn = establishConnection();
+  $sql = "SELECT * FROM `STUDENT`";
+  $result = $conn->query($sql);
 
+  if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        echo $row["SID"] . "<br>";
+        echo $row["DATE_IN_SCHOOL"] . "<br>";
+        echo $row["NAME"] . "<br>";
+    }
+  } else {
+      echo "0 results";
+  }
 }
 
 function removeStudent($id) {
   $conn = establishConnection();
-  $sql = "DELETE FROM `STUDENT` WHERE `SID`=\"" . $id . "\"";
-
-	if($mysqli->query(sql)) {
+  $sql = "DELETE FROM `STUDENT` WHERE `NAME`=\"" . $id . "\"";
+  
+  if($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";
-	} else {
-	  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-  }
+  } else {
+    echo "Error deleting record: " . $conn->error;
+  } 
 }
 
 function addLibrarian($id, $name, $office) {
@@ -94,13 +106,12 @@ $conn = establishConnection();
 
 function removeLibrarian($id) {
   $conn = establishConnection();
-
   $sql = "DELETE FROM `LIBRARIAN` WHERE `ID`=\"" . $id . "\"";
 
-	if($mysqli->query(sql)) {
+  if(mysqli_query($conn, $sql)) {
     echo "Record deleted successfully";
-	} else {
-	  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 }
 
@@ -124,7 +135,7 @@ function removeBook($id) {
   $conn = establishConnection();
   $sql = "DELETE FROM `BOOKS` WHERE `BOOK_ID`=\"" . $id . "\"";
 
-	if($mysqli->query(sql)) {
+	if(mysqli_query($conn, $sql)) {
     echo "Record deleted successfully";
 	} else {
 	  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
