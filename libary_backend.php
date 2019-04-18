@@ -16,10 +16,10 @@ function establishConnection() {
 
 function triggerAction() {
   if(isset($_POST['addS'])) {
-     addStudent();
+     addStudent($_POST["sid"], $_POST["dis"], $_POST["name"]);
   }
   else if(isset($_POST['viewS'])) {
-     viewStudent();
+     viewStudent($_POST["id"], $_POST["name"], $_POST["office"]);
   }
   else if(isset($_POST['deleteS'])) {
      deleteStudent();
@@ -49,9 +49,6 @@ function triggerAction() {
 
 function addStudent($sid, $dis, $name) {
   $conn = establishConnection();
-  $sid = $_POST["sid"];
-  $dis = $_POST["dis"];
-  $name = $_POST["name"];
   $sql = "INSERT INTO `STUDENT` (SID, DATE_IN_SCHOOL, NAME) VALUES (\"" . $sid . "\", \"" . $dis . "\", \"" . $name . "\")";
 
   if (mysqli_query($conn, $sql)) {
@@ -72,8 +69,15 @@ $conn = establishConnection();
 
 }
 
-function addLibrarian() {
-$conn = establishConnection();
+function addLibrarian($id, $name, $office) {
+  $conn = establishConnection();
+  $sql = "INSERT INTO `LIBRARIAN` (ID, LIBRARIAN_NAME, OFFICE) VALUES (\"" . $id . "\", \"" . $name . "\", \"" . $office . "\")";
+
+  if (mysqli_query($conn, $sql)) {
+      echo "New record created successfully";
+  } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
 
 }
 
@@ -87,9 +91,15 @@ $conn = establishConnection();
 
 }
 
-function addBook() {
-$conn = establishConnection();
+function addBook($id, $pg, $title, $genre) {
+  $conn = establishConnection();
+  $sql = "INSERT INTO `STUDENT` (BOOK_ID, PAGECOUNT, TITLE, GENRE) VALUES (\"" . $id . "\", \"" . $pg . "\", \"" . $title . "\", \"" . $genre . "\")";
 
+  if (mysqli_query($conn, $sql)) {
+      echo "New record created successfully";
+  } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
 }
 
 function listBook() {
@@ -134,6 +144,7 @@ function testSQL() {
   }
 }
 
+//Locate Function to Call
 triggerAction();
 
 //Add Back Button
