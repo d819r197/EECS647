@@ -1,0 +1,38 @@
+/*Student Style*/
+.addStudent {
+  display: none;
+}
+
+.viewStudent {
+  display: none;
+}
+
+.deleteStudent {
+  display: none;
+}
+
+/*Librarian Style*/
+.addLibrarian {
+  display: none;
+}
+
+.viewLibrarian {
+  display: none;
+}
+
+.deleteLibrarian {
+  display: none;
+}
+
+/*Book Style*/
+.addBook {
+  display: none;
+}
+
+.viewBook {
+  display: none;
+}
+
+.deleteBook {
+  display: none;
+}

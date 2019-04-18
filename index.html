@@ -3,18 +3,94 @@
   <link href="style.css"
         rel="stylesheet"
         type="text/css"/>
+  <script src="main.js"></script>
 </head>
 <body>
+  <h1><b>Student Query</b></h1><hr>
+  <select onchange="showSelection('student', this)">
+    <option>Choose One</option>
+    <option value="addStudent"> Add Student </option>
+    <option value="viewStudent"> View Student </option>
+    <option value="deleteStudent"> Delete Student </option>
+  </select>
+
+  <h1><b>Librarian Query</b></h1><hr>
+  <select onchange="showSelection('librarian', this)">
+    <option>Choose One</option>
+    <option value="addLibrarian"> Add Librarian </option>
+    <option value="viewLibrarian"> View Librarian </option>
+    <option value="deleteLibrarian"> Delete Librarian </option>
+  </select>
+
+  <h1><b>Book Query</b></h1><hr>
+  <select onchange="showSelection('book', this)">
+    <option>Choose One</option>
+    <option value="addBook"> Add Book </option>
+    <option value="viewBook"> View Books </option>
+    <option value="deleteBook"> Delete Books </option>
+  </select>
+
+  <h1><b>Test Query</b></h1>
   <form action="libary_backend.php" method="post">
-    <input name="sid" value="Insert StudentID">
-    <input name="dis" value="Insert Date In School">
-    <input name="name" value="Insert Name">
-    <input name="addS" type="submit" value="Submit">
-  </form> 
-  <br><hr><br> 
-  <form action="libary_backend.php" method="post">
-    <h1><b>Test Query</b></h1>
     <input name="testSQL" type="submit" value="Submit">
   </form>
+
+  <br><hr><br>
+
+  <!-- Student Forms -->
+  <form class="addStudent" id="addStudent" action="libary_backend.php" method="post">
+    <input class="addStudent" name="sid" value="Insert StudentID">
+    <input class="addStudent" name="dis" value="Insert Date In School">
+    <input class="addStudent" name="name" value="Insert Name">
+    <input class="addStudent" name="addS" type="submit" value="Submit" >
+  </form>
+
+  <form class="viewStudent" id="viewStudent" action="libary_backend.php" method="post" style="visibility: none">
+    <input class="viewStudent" name="name" value="Insert Name">
+    <input class="viewStudent" name="viewS" type="submit" value="Submit">
+  </form>
+
+  <form class="deleteStudent" id="deleteStudent" action="libary_backend.php" method="post" style="visibility: none">
+    <input class="deleteStudent" name="name" value="Insert Name">
+    <input class="deleteStudent" name="deleteS" type="submit" value="Submit">
+  </form>
+
+  <!-- Librarian Forms -->
+  <form class="addLibrarian" id="addLibrarian" action="libary_backend.php" method="post" style="visibility: none">
+    <input class="addLibrarian" name="id" value="Insert Librarian ID">
+    <input class="addLibrarian" name="name" value="Insert Librarian Name">
+    <input class="addLibrarian" name="office" value="Insert Librarian Office">
+    <input class="addLibrarian" name="addL" type="submit" value="Submit">
+  </form>
+
+  <form class="viewLibrarian" id="viewLibrarian" action="libary_backend.php" method="post" style="visibility: none">
+    <input class="viewLibrarian" name="id" value="Insert Librarian ID">
+    <input class="viewLibrarian" name="viewL" type="submit" value="Submit">
+  </form>
+
+  <form class="deleteLibrarian" id="deleteLibrarian" action="libary_backend.php" method="post" style="visibility: none">
+    <input class="deleteLibrarian" name="id" value="Insert Librarian ID">
+    <input class="deleteLibrarian" name="deleteL" type="submit" value="Submit">
+  </form>
+
+  <!-- Book Forms -->
+  <form class="addBook" id="addBook" action="libary_backend.php" method="post" style="visibility: none">
+    <input class="addBook" name="id" value="Insert Book ID" >
+    <input class="addBook" name="pc" value="Insert Book Page Count">
+    <input class="addBook" name="title" value="Insert Book Title">
+    <input class="addBook" name="genre" value="Insert Book Genre">
+    <input class="addBook" name="addB" type="submit" value="Submit">
+  </form>
+
+  <form class="viewBoo" id="viewBook" action="libary_backend.php" method="post" style="visibility: none">
+    <input class="viewBook" name="id" value="Insert Book ID">
+    <input class="viewBook" name="viewB" type="submit" value="Submit">
+  </form>
+
+  <form class="deleteBook" id="deleteBook" action="libary_backend.php" method="post" style="visibility: none">
+    <input class="deleteBook" name="id" value="Insert Book ID">
+    <input class="deleteBook" name="deleteB" type="submit" value="Submit">
+  </form>
+
 </body>
 </html>

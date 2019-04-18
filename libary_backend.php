@@ -14,6 +14,39 @@ function establishConnection() {
   return($conn);
 }
 
+function triggerAction() {
+  if(isset($_POST['addS'])) {
+     addStudent();
+  }
+  else if(isset($_POST['viewS'])) {
+     viewStudent();
+  }
+  else if(isset($_POST['deleteS'])) {
+     deleteStudent();
+  }
+  else if(isset($_POST['addL'])) {
+     addLibrarian();
+  }
+  else if(isset($_POST['viewL'])) {
+     viewLibrarian();
+  }
+  else if(isset($_POST['deleteL'])) {
+     deleteLibrarian();
+  }
+  else if(isset($_POST['addB'])) {
+     addBook();
+  }
+  else if(isset($_POST['viewB'])) {
+     viewBook();
+  }
+  else if(isset($_POST['deleteB'])) {
+     deleteBook();
+  }
+  else if(isset($_POST['testSQL'])) {
+     testSQL();
+  }
+}
+
 function addStudent($sid, $dis, $name) {
   $conn = establishConnection();
   $sid = $_POST["sid"];
@@ -29,24 +62,15 @@ function addStudent($sid, $dis, $name) {
 
 }
 
-function triggerAction() {
-  if(isset($_POST['addS'])) {
-     addStudent();
-  } 
-  else if(isset($_POST['testSQL'])) {
-     testSQL();
-  }
-}
-
 function listStudent() {
 $conn = establishConnection();
- 
+
 }
 
 function removeStudent() {
 $conn = establishConnection();
 
-} 
+}
 
 function addLibrarian() {
 $conn = establishConnection();
@@ -55,7 +79,7 @@ $conn = establishConnection();
 
 function listLibrarian() {
 $conn = establishConnection();
-  
+
 }
 
 function removeLibrarian() {
@@ -63,6 +87,22 @@ $conn = establishConnection();
 
 }
 
+function addBook() {
+$conn = establishConnection();
+
+}
+
+function listBook() {
+$conn = establishConnection();
+
+}
+
+function removeBook() {
+$conn = establishConnection();
+
+}
+
+/*
 function checkoutBook() {
 $conn = establishConnection();
 
@@ -70,13 +110,14 @@ $conn = establishConnection();
 
 function listCheckedoutBook () {
 $conn = establishConnection();
-  
+
 }
 
 function checkinBook() {
 $conn = establishConnection();
-  
+
 }
+*/
 
 function testSQL() {
   $conn = establishConnection();
@@ -94,8 +135,6 @@ function testSQL() {
 }
 
 triggerAction();
-//testSQL();
-//addStudent($_POST["sid"], $_POST["dis"], $_POST["name"]);
 
 //Add Back Button
 echo "<br><hr><a href='index.html'>Back</a>";
@@ -106,4 +145,3 @@ $conn->close();
 ?>
 
                                                                                                                                                                                           86,0-1        Bot
-
