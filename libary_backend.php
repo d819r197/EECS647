@@ -22,7 +22,7 @@ function triggerAction() {
      viewStudent();
   }
   else if(isset($_POST['deleteS'])) {
-     deleteStudent();
+     deleteStudent($_POST["name"]);
   }
   else if(isset($_POST['addL'])) {
      addLibrarian($_POST["id"], $_POST["name"], $_POST["office"]);
@@ -31,7 +31,7 @@ function triggerAction() {
      viewLibrarian();
   }
   else if(isset($_POST['deleteL'])) {
-     deleteLibrarian();
+     deleteLibrarian($_POST["id"]);
   }
   else if(isset($_POST['addB'])) {
      addBook($_POST["id"], $_POST["pc"], $_POST["title"], $_POST["genre"]);
@@ -40,7 +40,7 @@ function triggerAction() {
      viewBook();
   }
   else if(isset($_POST['deleteB'])) {
-     deleteBook();
+     deleteBook($_POST["id"]);
   }
   else if(isset($_POST['testSQL'])) {
      testSQL();
@@ -64,9 +64,15 @@ $conn = establishConnection();
 
 }
 
-function removeStudent() {
-$conn = establishConnection();
+function removeStudent($id) {
+  $conn = establishConnection();
+  $sql = "DELETE FROM `STUDENT` WHERE `SID`=\"" . $id . "\"";
 
+	if($mysqli->query(sql)) {
+    echo "Record deleted successfully";
+	} else {
+	  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
 }
 
 function addLibrarian($id, $name, $office) {
@@ -86,9 +92,16 @@ $conn = establishConnection();
 
 }
 
-function removeLibrarian() {
-$conn = establishConnection();
+function removeLibrarian($id) {
+  $conn = establishConnection();
 
+  $sql = "DELETE FROM `LIBRARIAN` WHERE `ID`=\"" . $id . "\"";
+
+	if($mysqli->query(sql)) {
+    echo "Record deleted successfully";
+	} else {
+	  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
 }
 
 function addBook($id, $pg, $title, $genre) {
@@ -107,9 +120,15 @@ $conn = establishConnection();
 
 }
 
-function removeBook() {
-$conn = establishConnection();
+function removeBook($id) {
+  $conn = establishConnection();
+  $sql = "DELETE FROM `BOOKS` WHERE `BOOK_ID`=\"" . $id . "\"";
 
+	if($mysqli->query(sql)) {
+    echo "Record deleted successfully";
+	} else {
+	  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
 }
 
 /*
