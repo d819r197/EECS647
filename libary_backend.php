@@ -15,8 +15,10 @@ function establishConnection() {
 }
 
 function triggerAction() {
+  echo "Student VIEW: " . isset($_POST['viewS']);
   if(isset($_POST['addS'])) {
-     addStudent($_POST["sid"], $_POST["dis"], $_POST["name"]);
+    echo "below student"; 
+    addStudent($_POST["sid"], $_POST["dis"], $_POST["name"]);
   }
   else if(isset($_POST['viewS'])) {
      viewStudent();
@@ -60,13 +62,15 @@ function addStudent($sid, $dis, $name) {
 }
 
 function listStudent() {
+echo "starting student";
   $conn = establishConnection();
   $sql = "SELECT * FROM `STUDENT`";
   $result = $conn->query($sql);
-
+echo "made it";
   if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {
+//        printf ("%s (%s)\n", $row["SID"], $row["DATE_IN_SCHOOL"], $row["NAME"]);
         echo $row["SID"] . "<br>";
         echo $row["DATE_IN_SCHOOL"] . "<br>";
         echo $row["NAME"] . "<br>";
