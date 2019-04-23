@@ -13,6 +13,7 @@ function showSelection(sectionOperation) {
     }
   }
   if(sectionOperation.startsWith('view')) {
+    console.log("View Function");
     document.getElementById(sectionOperation).submit();
   }
   else {
