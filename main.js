@@ -11,15 +11,19 @@ function showSelection(sectionOperation) {
     for(let d = 0; d<deleteArr.length;d++) {
       deleteArr[d].style.display = "none";
     }
+    let viewArr = document.getElementsByClassName("view"+sections[lcv]);
+    for(let v = 0; v<viewArr.length;v++) {
+      viewArr[v].style.display = "none";
+    }
   }
-  if(sectionOperation.startsWith('view')) {
-    console.log("View Function");
+/*  if(sectionOperation.startsWith('view')) {
+    document.getElementById('viewS').style.display = "block";
+	console.log("in");
     document.getElementById(sectionOperation).submit();
-  }
-  else {
+*/
     let currentArr = document.getElementsByClassName(sectionOperation);
+    
     for(let c = 0; c<currentArr.length;c++) {
       currentArr[c].style.display = "block";
     }
-  }
 }

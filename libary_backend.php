@@ -9,19 +9,17 @@ function establishConnection() {
       die("Connection failed: " . $conn->connect_error);
   }
   else {
-    echo "Connected successfully <br>";
+    echo "Connected successfully <br><hr>";
   }
   return($conn);
 }
 
 function triggerAction() {
-  echo "Student VIEW: " . isset($_POST['viewS']);
   if(isset($_POST['addS'])) {
-    echo "below student"; 
     addStudent($_POST["sid"], $_POST["dis"], $_POST["name"]);
   }
   else if(isset($_POST['viewS'])) {
-     viewStudent();
+    listStudent();
   }
   else if(isset($_POST['deleteS'])) {
      removeStudent($_POST["name"]);
@@ -30,7 +28,7 @@ function triggerAction() {
      addLibrarian($_POST["lid"], $_POST["name"], $_POST["office"]);
   }
   else if(isset($_POST['viewL'])) {
-     viewLibrarian();
+     listLibrarian();
   }
   else if(isset($_POST['deleteL'])) {
      removeLibrarian($_POST["lid"]);
@@ -39,7 +37,7 @@ function triggerAction() {
      addBook($_POST["id"], $_POST["pc"], $_POST["title"], $_POST["genre"]);
   }
   else if(isset($_POST['viewB'])) {
-     viewBook();
+     listBook();
   }
   else if(isset($_POST['deleteB'])) {
      removeBook($_POST["id"]);
@@ -62,18 +60,16 @@ function addStudent($sid, $dis, $name) {
 }
 
 function listStudent() {
-echo "starting student";
   $conn = establishConnection();
   $sql = "SELECT * FROM `STUDENT`";
   $result = $conn->query($sql);
-echo "made it";
+  
   if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {
-//        printf ("%s (%s)\n", $row["SID"], $row["DATE_IN_SCHOOL"], $row["NAME"]);
-        echo $row["SID"] . "<br>";
-        echo $row["DATE_IN_SCHOOL"] . "<br>";
-        echo $row["NAME"] . "<br>";
+        echo "SID: " . $row["SID"] . "<br>";
+        echo "Date In School: " . $row["DATE_IN_SCHOOL"] . "<br>";
+        echo "Student Name: " . $row["NAME"] . "<br><hr>";
     }
   } else {
       echo "0 results";
@@ -104,8 +100,20 @@ function addLibrarian($id, $name, $office) {
 }
 
 function listLibrarian() {
-$conn = establishConnection();
+  $conn = establishConnection();
+  $sql = "SELECT * FROM `LIBRARIAN`";
+  $result = $conn->query($sql);
 
+  if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        echo "ID: " . $row["ID"] . "<br>";
+        echo "Lirarian Name: " . $row["LIBRARIAN_NAME"] . "<br>";
+        echo "Office: " . $row["OFFICE"] . "<br><hr>";
+    }
+  } else {
+      echo "0 results";
+  }
 }
 
 function removeLibrarian($id) {
@@ -131,8 +139,21 @@ function addBook($id, $pg, $title, $genre) {
 }
 
 function listBook() {
-$conn = establishConnection();
-
+  $conn = establishConnection();
+  $sql = "SELECT * FROM `BOOKS`";
+  $result = $conn->query($sql);
+  
+  if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        echo "Book ID: " . $row["BOOK_ID"] . "<br>";
+        echo "Page Count: " . $row["PAGECOUNT"] . "<br>";
+        echo "Title: " . $row["TITLE"] . "<br>";
+        echo "Genre: " . $row["GENRE"] . "<br><hr>";
+    }
+  } else {
+      echo "0 results";
+  }
 }
 
 function removeBook($id) {
