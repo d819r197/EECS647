@@ -1,0 +1,70 @@
+<html>
+<head>
+  <link href="style.css"
+        rel="stylesheet"
+        type="text/css"/>
+  <script src="main.js"></script>
+</head>
+<body>
+  <!-- Navagation Bar -->
+  <ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="student.html">Students</a></li>
+    <li><a href="librarian.html">Librarians</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="library.html">Libraries</a></li>
+  </ul>
+  <h1>Books</h1>
+
+  <h1><b>Book Query</b></h1>
+  <select onchange="showSelection(this.value)">
+    <option>Choose One</option>
+    <option value="addBook"> Add Book </option>
+    <option value="viewBook"> View Books </option>
+    <option value="deleteBook"> Delete Books </option>
+  </select>
+
+  <hr>
+
+  <h1><b>Additional Queries</b></h1>
+  <h3 id="AQDes"></h3>
+  <select onchange="showAQSelection(this.value)">
+    <option>Choose One</option>
+    <option value="AQ_test"> Test Query </option>
+    <option value="AQ_sample1"> Sample 1 </option>
+    <option value="AQ_sample2"> Sample 2 </option>
+  </select>
+
+  <br><hr><br>
+
+  <!-- Book Forms -->
+  <form class="addBook" id="addBook" action="libary_backend.php" method="post" style="visibility: none">
+    <h3 class="addBook"><b>Description</b></h3>
+    <p class="addBook">Here you can add a new Book to the Library records. You will <br> need to insert the Book's ID, page count, title, <br> and genre and then click submit to update the Librarian records.</p>
+    <input class="addBook" name="id" value="Insert Book ID" >
+    <input class="addBook" name="pc" value="Insert Book Page Count">
+    <input class="addBook" name="title" value="Insert Book Title">
+    <input class="addBook" name="genre" value="Insert Book Genre">
+    <input class="addBook" name="addB" type="submit" value="Submit">
+  </form>
+
+  <form class="viewBook" id="viewBook" action="libary_backend.php" method="post" style="visibility: none">
+    <h3 class="viewBook"><b>Description</b></h3>
+    <p class="viewBook">Here you are able to view a list of Books in the Library. Simply <br>click the submit button to view the list.</p>
+    <input class="viewBook" type="submit" id="viewB" name="viewB" value="Get Books">
+  </form>
+
+  <form class="deleteBook" id="deleteBook" action="libary_backend.php" method="post" style="visibility: none">
+    <h3 class="deleteBook"><b>Description</b></h3>
+    <p class="deleteBook">Here you can delete a Book from the Library records. <br> You will need to insert a Book ID for which you<br> want to delete. Warning, deleting a Book is a permanent <br>action and can not be undone.</p>
+    <input class="deleteBook" name="id" value="Insert Book ID">
+    <input class="deleteBook" name="deleteB" type="submit" value="Submit">
+  </form>
+
+  <!-- Additional Queries -->
+  <form action="libary_backend.php" method="post">
+    <input id="testQ" name="testSQL" type="submit" value="Submit">
+  </form>
+
+</body>
+</html>

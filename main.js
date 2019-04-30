@@ -1,4 +1,4 @@
-function showSelection(sectionOperation) {
+function showSelection(selectedValue) {
   //Hide All Sections
   let sections = ["Student", "Librarian", "Book"];
   for(let lcv=0; lcv<3;lcv++) {
@@ -16,14 +16,13 @@ function showSelection(sectionOperation) {
       viewArr[v].style.display = "none";
     }
   }
-/*  if(sectionOperation.startsWith('view')) {
-    document.getElementById('viewS').style.display = "block";
-	console.log("in");
-    document.getElementById(sectionOperation).submit();
-*/
-    let currentArr = document.getElementsByClassName(sectionOperation);
-    
+    let currentArr = document.getElementsByClassName(selectedValue);
+
     for(let c = 0; c<currentArr.length;c++) {
       currentArr[c].style.display = "block";
     }
+}
+
+function showAQSelection(selectedValue) {
+  document.getElementById('testQ').style.display = 'block';
 }
