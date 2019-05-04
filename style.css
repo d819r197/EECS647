@@ -32,6 +32,9 @@ body {
 /*Student Style*/
 .addStudent {
   display: none;
+  text-align: center;
+  text-align-last: center;
+  vertical-align: middle;
 }
 
 .viewStudent {
