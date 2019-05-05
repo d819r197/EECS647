@@ -2,7 +2,7 @@
 
 function establishConnection() {
   // Create connection
-  $conn = new mysqli("mysql.eecs.ku.edu", "rblake", "chah9riL", "rblake");
+  $conn = new mysqli("mysql.eecs.ku.edu", "cjunpeng", "auCh7eiz", "cjunpeng");
 
   // Check connection
   if ($conn->connect_error) {
@@ -42,9 +42,34 @@ function triggerAction() {
   else if(isset($_POST['deleteB'])) {
      removeBook($_POST["id"]);
   }
-  else if(isset($_POST['testSQL'])) {
-     testSQL();
+  else if(isset($_POST['qu1'])) {
+    Squery1();
   }
+  else if(isset($_POST['qu2'])) {
+    Squery2();
+  }
+  else if(isset($_POST['qu3'])) {
+    Squery3();
+  }
+  else if(isset($_POST['qu4'])) {
+    Lquery1();
+  }
+  else if(isset($_POST['qu5'])) {
+    Lquery2();
+  }
+  else if(isset($_POST['qu6'])) {
+    Bquery1();
+  }
+  else if(isset($_POST['qu7'])) {
+    Bquery2();
+  }
+  else if(isset($_POST['qu8'])) {
+    Bquery3();
+  }
+  else if(isset($_POST['qu9'])) {
+    Liquery();
+  }
+
 }
 
 function addStudent($sid, $dis, $name) {
@@ -63,7 +88,7 @@ function listStudent() {
   $conn = establishConnection();
   $sql = "SELECT * FROM `STUDENT`";
   $result = $conn->query($sql);
-  
+
   if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {
@@ -79,12 +104,12 @@ function listStudent() {
 function removeStudent($id) {
   $conn = establishConnection();
   $sql = "DELETE FROM `STUDENT` WHERE `NAME`=\"" . $id . "\"";
-  
+
   if($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";
   } else {
     echo "Error deleting record: " . $conn->error;
-  } 
+  }
 }
 
 function addLibrarian($id, $name, $office) {
@@ -142,7 +167,7 @@ function listBook() {
   $conn = establishConnection();
   $sql = "SELECT * FROM `BOOKS`";
   $result = $conn->query($sql);
-  
+
   if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {
@@ -198,6 +223,150 @@ function testSQL() {
       echo "0 results";
   }
 }
+
+//Query1(List the Student who borrowed the book from Book Mark Library)
+function Squery1(){
+  $conn =establishConnection();
+  $sql ="SELECT `NAME` FROM `STUDENT`,`RENT_BOOK_FROM` WHERE `STUDENT`.`SID`=`RENT_BOOK_FROM`.`SID` AND `LIBRARY_NAME`= 'Book Mark Library'";
+  $result = $conn->query($sql);
+  if($result->num_rows > 0){
+    while($row=$result ->fetch_assoc()){
+       echo "Student ID: " . $row["NAME"] . "<br>";
+    }
+  }else {
+    echo "0 results";
+  }
+}
+
+//Query2(List the Student who borrowed the book with hightest pages)
+function Squery2(){
+  $conn =establishConnection();
+  $sql ="SELECT `NAME` FROM `STUDENT`,`RENT_BOOK_FROM`,`BOOKS` WHERE `STUDENT`.`SID`=`RENT_BOOK_FROM`.`SID` AND `RENT_BOOK_FROM`.`BOOK_ID`=`BOOKS`.`BOOK_ID` AND `PAGECOUNT`>=ALL (SELECT `PAGECOUNT` FROM `BOOKS`)";
+  $result = $conn->query($sql);
+  if($result->num_rows > 0){
+    while($row=$result ->fetch_assoc()){
+       echo "Student ID: " . $row["NAME"] . "<br>";
+      //  echo "Pagecount: " . $row["PAGECOUNT"] . "<br>";
+    }
+  }else {
+    echo "0 results";
+  }
+}
+
+// Query3(List the Student who passed the due date)
+function Squery3(){
+  $conn =establishConnection();
+  $sql ="SELECT DISTINCT `NAME`,`CHECKOUTDATE`,`DUEDATE` FROM `STUDENT`,`RENT_BOOK_FROM` WHERE `STUDENT`.`SID`=`RENT_BOOK_FROM`.`SID` AND `DUEDATE`< `CHECKOUTDATE` GROUP BY NAME";
+  $result = $conn->query($sql);
+  if($result->num_rows > 0){
+    while($row=$result ->fetch_assoc()){
+       echo "Student ID: " . $row["NAME"] . "<br>";
+       echo "Checkout date: " . $row["CHECKOUTDATE"] . "<br>";
+       echo "Due date: " . $row["DUEDATE"] . "<br>";
+    }
+  }else {
+    echo "0 results";
+  }
+}
+
+//Query1(List the name of library which has the most books)
+function Lquery1(){
+  $conn =establishConnection();
+  $sql ="SELECT `LIBRARY_NAME` FROM `LIBRARY` WHERE `NUMOFBOOKS`>=ALL(SELECT `NUMOFBOOKS` FROM `LIBRARY`)";
+  $result = $conn->query($sql);
+  if($result->num_rows > 0){
+    while($row=$result ->fetch_assoc()){
+       echo "Library name: " . $row["LIBRARY_NAME"] . "<br>";
+    }
+  }else {
+    echo "0 results";
+  }
+}
+
+// Query2(List the name of library which has a librarian works in office 012)
+function Lquery2(){
+  $conn =establishConnection();
+  $sql ="SELECT `LIBRARY_NAME`
+  FROM `LIBRARY` , `LIBRARIAN`
+  WHERE `LIBRARY`.`LIBRARIAN_NAME` = `LIBRARIAN`.`LIBRARIAN_NAME`
+  AND `OFFICE` = '012'";
+  $result = $conn->query($sql);
+  if($result->num_rows > 0){
+    while($row=$result ->fetch_assoc()){
+       echo "Library name: " . $row["LIBRARY_NAME"] . "<br>";
+    }
+  }else {
+    echo "0 results";
+  }
+}
+
+//Query1(List the title of book which has been checked out before 2014-05)
+function Bquery1(){
+  $conn =establishConnection();
+  $sql ="SELECT DISTINCT `TITLE`
+  FROM `BOOKS`, `RENT_BOOK_FROM`
+  WHERE `BOOKS`.`BOOK_ID` = `RENT_BOOK_FROM`.`BOOK_ID`
+  AND `CHECKOUTDATE` < '2014-05-00 00:00:00'";
+  $result = $conn->query($sql);
+  if($result->num_rows > 0){
+    while($row=$result ->fetch_assoc()){
+       echo "Title name: " . $row["TITLE"] . "<br>";
+    }
+  }else {
+    echo "0 results";
+  }
+}
+
+//Query2(List the title of book is borrowed by Frank )
+function Bquery2(){
+  $conn =establishConnection();
+  $sql ="SELECT `TITLE`
+  FROM `BOOKS`, `RENT_BOOK_FROM`, `STUDENT`
+  WHERE `BOOKS`.`BOOK_ID` = `RENT_BOOK_FROM`.`BOOK_ID`
+  AND `RENT_BOOK_FROM`.`SID` = `STUDENT`.`SID`
+  AND `STUDENT`.`NAME` = 'Frank'";
+  $result = $conn->query($sql);
+  if($result->num_rows > 0){
+    while($row=$result ->fetch_assoc()){
+       echo "Library name: " . $row["TITLE"] . "<br>";
+    }
+  }else {
+    echo "0 results";
+  }
+}
+
+//Query3(List the title of book with Medical genre)
+function Bquery3(){
+  $conn =establishConnection();
+  $sql ="SELECT `TITLE`
+  FROM `BOOKS`
+  WHERE `GENRE` = 'Medical'";
+  $result = $conn->query($sql);
+  if($result->num_rows > 0){
+    while($row=$result ->fetch_assoc()){
+       echo "Library name: " . $row["TITLE"] . "<br>";
+    }
+  }else {
+    echo "0 results";
+  }
+}
+
+function Liquery(){
+  $conn =establishConnection();
+  $sql ="SELECT LIBRARIAN_NAME
+  FROM LIBRARIAN
+  WHERE OFFICE = '099'";
+  $result = $conn->query($sql);
+  if($result->num_rows > 0){
+    while($row=$result ->fetch_assoc()){
+       echo "Title name: " . $row["LIBRARIAN_NAME"] . "<br>";
+    }
+  }else {
+    echo "0 results";
+  }
+}
+
+
 
 //Locate Function to Call
 triggerAction();

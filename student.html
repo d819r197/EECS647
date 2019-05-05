@@ -83,23 +83,26 @@ padding: 0 !important;
   <hr>
 
   <h1 style="text-align:center;"><b>Additional Queries</b></h1>
-    <div style="text-align:center; text-align-last: center;">
-  <h3 id="AQDes"></h3>
-  <select onchange="showAQSelection(this.value)" style="text-align: center; text-align-last: center;">
-    <option >Choose One</option>
-    <option value="AQ_test"> Test Query </option>
-    <option value="AQ_sample1"> Sample 1 </option>
-    <option value="AQ_sample2"> Sample 2 </option>
-  </select>
-</div>
+  <div style="text-align:center; text-align-last: center;">
+  <form class="Query1" id="Query1" action="libary_backend.php" method="post">
+    <input class="Query1" name="qu1" type="submit" value="List the Student who borrowed the book from Book Mark Library" >
+  </form>
+
+  <form class="Query2" id="Query2" action="libary_backend.php" method="post">
+    <input class="Query2" name="qu2" type="submit" value="List the Student who borrowed the book with hightest pages" >
+  </form>
+
+  <form class="Query3" id="Query3" action="libary_backend.php" method="post">
+    <input class="Query3" name="qu3" type="submit" value="List the Student who passed the due date" >
+  </form>
   <br><hr><br>
 
 
 
   <!-- Additional Queries -->
-  <form action="libary_backend.php" method="post">
+  <!-- <form action="libary_backend.php" method="post">
     <input id="testQ" name="testSQL" type="submit" value="Submit">
-  </form>
-
+  </form> -->
+</div>
 </body>
 </html>
